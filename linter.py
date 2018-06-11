@@ -14,7 +14,6 @@ from SublimeLinter.lint import Linter
 
 
 class Ghdl(Linter):
-
     """Provides an interface to ghdl."""
 
     syntax = 'vhdl'
@@ -42,7 +41,6 @@ class Ghdl(Linter):
         linter name.
 
         """
-
         match, line, col, error, warning, message, near = super().split_match(match)
 
         if match:
