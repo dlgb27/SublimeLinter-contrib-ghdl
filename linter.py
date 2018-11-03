@@ -18,10 +18,11 @@ class Ghdl(Linter):
     """Provides an interface to ghdl."""
 
     syntax = 'vhdl'
-    cmd = 'ghdl -a @'
+    cmd = 'ghdl -a ${temp_file}'
     version_re = r'GHDL (?P<version>\d+\.\d+)'
     version_requirement = '>= 0.31'
     tempfile_suffix = 'vhd'
+    on_stderr = None
 
     # Here is a sample ghdl error output:
     # ----8<------------
